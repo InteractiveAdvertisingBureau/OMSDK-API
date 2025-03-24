@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OMIDJavaScriptSessionService Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/OMIDJavaScriptSessionService" class="dashAnchor"></a>
+    <a title="OMIDJavaScriptSessionService Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">OMSDK 1.5 Docs</a> (83% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">OMSDK</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        <a href="../Classes.html">Classes</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        OMIDJavaScriptSessionService Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDAdEvents.html">OMIDAdEvents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDAdSession.html">OMIDAdSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDAdSessionConfiguration.html">OMIDAdSessionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDAdSessionContext.html">OMIDAdSessionContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDJavaScriptSessionService.html">OMIDJavaScriptSessionService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDMediaEvents.html">OMIDMediaEvents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDPartner.html">OMIDPartner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDSDK.html">OMIDSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDScriptInjector.html">OMIDScriptInjector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDVASTProperties.html">OMIDVASTProperties</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDVerificationScriptResource.html">OMIDVerificationScriptResource</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDCreativeType.html">OMIDCreativeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDErrorType.html">OMIDErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDFriendlyObstructionType.html">OMIDFriendlyObstructionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDImpressionType.html">OMIDImpressionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDInteractionType.html">OMIDInteractionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDOwner.html">OMIDOwner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDPlayerState.html">OMIDPlayerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDPosition.html">OMIDPosition</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>OMIDJavaScriptSessionService</h1>
+              <div class="declaration">
+                <div class="language">
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">OMIDJavaScriptSessionService</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">WKScriptMessageHandler</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">OMIDJavaScriptSessionService</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">WKScriptMessageHandler</span></code></pre>
+
+                </div>
+              </div>
+            <p>Service supporting ad sessions managed (started/finished) via JavaScript Session Client APIs
+by providing native-layer measurement signals.
+If the JS Session Client is running in a web view, an instance of this service must be
+initialized with the web view before starting or finishing ad sessions using JS APIs.
+Only one instance of this service may be initialized at a time for a given web view; to reuse a
+web view the current instance must be torn down (see <code>tearDownWithCompletion</code>).</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDJavaScriptSessionService(im)initWithPartner:webView:isHTMLAdView:error:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithPartner:webView:isHTMLAdView:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDJavaScriptSessionService(im)initWithPartner:webView:isHTMLAdView:error:">-initWithPartner:<wbr>webView:<wbr>isHTMLAdView:<wbr>error:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes an instance of the service.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithPartner</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/OMIDPartner.html">OMIDPartner</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">partner</span>
+                                 <span class="nf">webView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">WKWebView</span> <span class="o">*</span><span class="p">)</span><span class="nv">webView</span>
+                            <span class="nf">isHTMLAdView</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">isHTMLAdView</span>
+                                   <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">partner</span><span class="p">:</span> <span class="kt"><a href="../Classes/OMIDPartner.html">OMIDPartner</a></span><span class="p">,</span> <span class="nv">webView</span><span class="p">:</span> <span class="kt">WKWebView</span><span class="p">,</span> <span class="nv">isHTMLAdView</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>partner</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Details of the integration partner responsible for ad sessions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>webView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The web view responsible for starting/finishing ad sessions via the JS Session
+Client.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isHTMLAdView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether the ad is rendered in HTML inside of the provided web view.
+If true, all ad sessions will be of type &ldquo;html&rdquo; and calling <code>setAdView</code> is
+not required.
+If false, all ad sessions will be of type &ldquo;javascript&rdquo; and <code>setAdView</code> must
+be called after initialization.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDJavaScriptSessionService(im)tearDownWithCompletion:"></a>
+                    <a name="//apple_ref/objc/Method/-tearDownWithCompletion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDJavaScriptSessionService(im)tearDownWithCompletion:">-tearDownWithCompletion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tears down this instance of the service.
+Calling this method will cause OM SDK to begin a teardown process including finishing all currently
+active ad sessions measured by this service instance and tearing down communication with the OM
+SDK&rsquo;s JavaScript layer running in the web view.
+This may require up to one second, for example in order to allow verification scripts time to process
+the <code>sessionFinish</code> event.
+Once this process has completed, the web view may be torn down or reused for another instance of
+the service without any adverse effects. If there is no need to tear down or reuse the web view, this
+method is not required.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">tearDownWithCompletion</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">BOOL</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="nv">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tearDown</span><span class="p">()</span> <span class="k">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Invoked by OM SDK after the teardown process has completed,
+or one second, whichever comes sooner.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDJavaScriptSessionService(py)adView"></a>
+                    <a name="//apple_ref/objc/Property/adView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDJavaScriptSessionService(py)adView">adView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The native view containing the ad.
+This property is readonly and must be set using <code>setAdView</code>.
+If <code>isHTMLAdView</code> was passed as true in <code>initWithPartner</code>, this will equal
+the web view by default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">UIView</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">adView</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">adView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDJavaScriptSessionService(im)setAdView:error:"></a>
+                    <a name="//apple_ref/objc/Method/-setAdView:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDJavaScriptSessionService(im)setAdView:error:">-setAdView:<wbr>error:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the native view that contains the ad and is used for viewability tracking.
+If <code>isHTMLAdView</code> was passed as true in <code>initWithPartner</code>, this method is
+not required since the ad view will be set to the web view by default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">setAdView</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">adView</span>
+            <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setAdView</span><span class="p">(</span><span class="n">_</span> <span class="nv">adView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>adView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The native view.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Whether the ad view was successfully set.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDJavaScriptSessionService(im)addFriendlyObstruction:purpose:detailedReason:error:"></a>
+                    <a name="//apple_ref/objc/Method/-addFriendlyObstruction:purpose:detailedReason:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDJavaScriptSessionService(im)addFriendlyObstruction:purpose:detailedReason:error:">-addFriendlyObstruction:<wbr>purpose:<wbr>detailedReason:<wbr>error:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a friendly obstruction which should then be excluded from all ad session viewability
+ calculations. While this instance of OMIDJavaScriptSessionService is running, this friendly
+ obstruction will be added to each ad session started by the integrator via the JS Session Client
+ until the obstruction is removed by calling <code>removeFriendlyObstruction</code> or
+ <code>removeAllFriendlyObstructions</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">addFriendlyObstruction</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">friendlyObstruction</span>
+                       <span class="nf">purpose</span><span class="p">:(</span><span class="n"><a href="../Enums/OMIDFriendlyObstructionType.html">OMIDFriendlyObstructionType</a></span><span class="p">)</span><span class="nv">purpose</span>
+                <span class="nf">detailedReason</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">detailedReason</span>
+                         <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addFriendlyObstruction</span><span class="p">(</span><span class="n">_</span> <span class="nv">friendlyObstruction</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="nv">purpose</span><span class="p">:</span> <span class="kt"><a href="../Enums/OMIDFriendlyObstructionType.html">OMIDFriendlyObstructionType</a></span><span class="p">,</span> <span class="nv">detailedReason</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>friendlyObstruction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The view to be excluded from all ad session viewability calculations.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>purpose</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The purpose of why this obstruction was necessary.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>detailedReason</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An explanation for why this obstruction is part of the ad experience if not
+already obvious from the purpose. Can be nil. If not nil, must be 50 characters or less and only
+contain characters <code>A-z</code>, <code>0-9</code>, or spaces.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Whether this friendly obstruction was successfully added. If the friendlyObstruction has
+already been added for this session, this method will return NO with no associated error object.
+However, if one or more arguments are against requirements, it will return NO with an error
+object assigned.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDJavaScriptSessionService(im)removeFriendlyObstruction:"></a>
+                    <a name="//apple_ref/objc/Method/-removeFriendlyObstruction:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDJavaScriptSessionService(im)removeFriendlyObstruction:">-removeFriendlyObstruction:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes a registered friendly obstruction from any currently running and future ad sessions
+measured by this instance of OMIDJavaScriptSessionService.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeFriendlyObstruction</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">friendlyObstruction</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeFriendlyObstruction</span><span class="p">(</span><span class="n">_</span> <span class="nv">friendlyObstruction</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDJavaScriptSessionService(im)removeAllFriendlyObstructions"></a>
+                    <a name="//apple_ref/objc/Method/-removeAllFriendlyObstructions" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDJavaScriptSessionService(im)removeAllFriendlyObstructions">-removeAllFriendlyObstructions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes all registered friendly obstructions from any currently running and future ad sessions
+measured by this instance of OMIDJavaScriptSessionService.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">removeAllFriendlyObstructions</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeAllFriendlyObstructions</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2025 <a class="link" href="" target="_blank" rel="external noopener">IAB</a>. All rights reserved. (Last updated: 2025-02-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

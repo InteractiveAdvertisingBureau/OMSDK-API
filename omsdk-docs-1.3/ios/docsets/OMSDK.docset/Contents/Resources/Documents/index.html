@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OMSDK  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="OMSDK  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">OMSDK 1.3 Docs</a> (84% documented)</p>
+        <div class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">OMSDK Reference</a>
+        <img id="carat" src="img/carat.png" alt=""/>
+        OMSDK  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/OMIDAdEvents.html">OMIDAdEvents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDAdSession.html">OMIDAdSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDAdSessionConfiguration.html">OMIDAdSessionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDAdSessionContext.html">OMIDAdSessionContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDMediaEvents.html">OMIDMediaEvents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDPartner.html">OMIDPartner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDSDK.html">OMIDSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDScriptInjector.html">OMIDScriptInjector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDVASTProperties.html">OMIDVASTProperties</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDVerificationScriptResource.html">OMIDVerificationScriptResource</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/OMIDCreativeType.html">OMIDCreativeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDErrorType.html">OMIDErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDFriendlyObstructionType.html">OMIDFriendlyObstructionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDImpressionType.html">OMIDImpressionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDInteractionType.html">OMIDInteractionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDOwner.html">OMIDOwner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDPlayerState.html">OMIDPlayerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDPosition.html">OMIDPosition</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='open-measurement-sdkios' class='heading'>Open-Measurement-SDKiOS</h1>
+
+<p><a href="https://app.travis-ci.com/InteractiveAdvertisingBureau/Open-Measurement-SDKiOS"><img src="https://app.travis-ci.com/InteractiveAdvertisingBureau/Open-Measurement-SDKiOS.svg?token=vsmPZDVPHxaxaCA2Bz2q&branch=master" alt="Build Status"></a></p>
+<h2 id='overview' class='heading'>Overview</h2>
+
+<p>This repository contains the native iOS code of Open Measurement SDK, also known as OM SDK.</p>
+<h2 id='folder-structure' class='heading'>Folder Structure</h2>
+
+<p>Files are organized as a standard iOS project for Xcode and Cocoapods.</p>
+<h3 id='code-appverificationlibrary-xcworkspace-code' class='heading'><code>AppVerificationLibrary.xcworkspace</code></h3>
+
+<p>The Xcode workspace which includes both <code>AppVerificationLibrary.xcodeproj</code> and <code>Pods/Pods.xcodeproj</code>.</p>
+<h3 id='code-appverificationlibrary-code' class='heading'><code>AppVerificationLibrary/</code></h3>
+
+<p>Contains the source code for the SDK.</p>
+<h3 id='code-omsdk-code' class='heading'><code>OMSDK/</code></h3>
+
+<p>Contains the header and info.plist for the dynamic framework.</p>
+<h3 id='code-appverificationlibrary-tests-code' class='heading'><code>AppVerificationLibrary-Tests/</code></h3>
+
+<p>Contains the source code for the unit tests.</p>
+<h3 id='code-om-testapp-code' class='heading'><code>OM-TestApp/</code></h3>
+
+<p>Contains the source code for the iOS Reference App. </p>
+<h3 id='code-om-demo-code' class='heading'><code>OM-Demo/</code></h3>
+
+<p>Contains the demo project template, <code>OM-Demo-Template.xcodeproj</code> and other files which ship with OM SDK. </p>
+
+<p><em>Note</em>:  <code>OM-Demo</code> is intended for integrators to build and run after being copied into a distribution archive  rather than for SDK engineers debugging the SDK and/or Reference app. SDK engineers should run <code>OM-TestApp</code> in the <code>AppVerificationLibrary.xcworkspace</code>.</p>
+<h3 id='code-om-fullstackapptests-code' class='heading'><code>OM-FullstackAppTests/</code></h3>
+
+<p>Contains the fullstack tests that begin with iOS app setup and are validated based on the events received by an OMID verification client.</p>
+
+<p><em>Note</em>: In order for these tests to run properly, the following JS OMID artifacts need to be copied into the <code>OM-FullstackApp/Assets/OMIDJS/</code> directory: (1) omsdk-v1.js (2) omid-session-client-v1.js (3) omid-verification-client-v1.js (4) omid-validation-verification-script-v1.js</p>
+<h3 id='code-config-xcconfig-code-and-code-configtest-xcconfig-code' class='heading'><code>Config.xcconfig</code> and <code>ConfigTest.xcconfig</code></h3>
+
+<p>Textual configuration files that supplement the settings in the <code>.xcodeproj</code> file, including semantic version number  and partner namespace.</p>
+<h3 id='code-podfile-code-and-code-podfile-lock-code' class='heading'><code>Podfile</code> and <code>Podfile.lock</code></h3>
+
+<p>Cocoapods configuration files.</p>
+<h3 id='code-docs-code' class='heading'><code>docs/</code></h3>
+
+<p>Implementation instructions</p>
+<h3 id='code-changelog-md-code' class='heading'><code>CHANGELOG.md</code></h3>
+
+<p>All notable changes to the project are documented in the changelog. The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>.</p>
+<h2 id='integration-instructions' class='heading'>Integration Instructions</h2>
+
+<p>Please see the detailed instructions in the <a href="docs/index.md">docs directory</a>.</p>
+
+<p><em>Note</em>: The remaining instructions in this file are for developers making changes to the OM SDK library.
+Developers who want to integrate OM SDK into their apps should download the namespaced builds from the 
+IAB Tech Lab portal.</p>
+<h2 id='developer-setup' class='heading'>Developer Setup</h2>
+
+<p>The OM SDK library is built as an Xcode project. The library does not have any external dependencies, but the tests make use of OCMock, which is installed via Cocoapods.</p>
+<h3 id='prerequisites' class='heading'>Prerequisites</h3>
+
+<ul>
+<li>Xcode 11.3 or later</li>
+<li>Cocoapods 1.8.4 or later — Follow the installation instructions at the
+<a href="https://guides.cocoapods.org/using/getting-started.html">Cocoapods website</a>.</li>
+</ul>
+<h3 id='prepare-workspace-with-cocoapods' class='heading'>Prepare workspace with Cocoapods</h3>
+
+<p>In order to run unit tests, you need to install dependencies via Cocoapods. Open a shell in your local working directory and enter:</p>
+<pre class="highlight shell"><code>pod <span class="nb">install</span>
+</code></pre>
+<h3 id='download-the-om-sdk-service-javascript' class='heading'>Download the OM SDK Service JavaScript</h3>
+
+<p>In order to run the test app, you need to:</p>
+
+<ul>
+<li>Download the latest <code>omsdk-v1.js</code> release from the <a href="https://tools.iabtechlab.com/omsdk">IAB portal</a></li>
+<li>Copy it into <code>OM-Demo/OMSDK/Service/</code>.</li>
+</ul>
+<h2 id='building-with-xcode' class='heading'>Building with Xcode</h2>
+
+<p>Build the SDK and run tests using Xcode.  </p>
+
+<p>Open <code>AppVerificationLibrary.xcworkspace</code></p>
+
+<ul>
+<li>The <code>AppVerificationLibrary</code> target builds the library.</li>
+<li>The <code>OMSDK</code> target builds the dynamic framework.</li>
+<li>The <code>AppVerificationLibrary-Tests</code> target performs the unit tests.</li>
+<li>The <code>OM-TestApp</code> target builds both the reference app and the library dependency.</li>
+</ul>
+<h2 id='building-with-command-line' class='heading'>Building with Command Line</h2>
+<h3 id='build-sdk-as-a-static-library' class='heading'>Build SDK as a Static Library</h3>
+<pre class="highlight shell"><code>xcodebuild build <span class="se">\</span>
+  <span class="nt">-workspace</span> AppVerificationLibrary.xcworkspace <span class="se">\</span>
+  <span class="nt">-scheme</span> AppVerificationLibrary
+</code></pre>
+<h3 id='build-sdk-as-a-dynamic-framework' class='heading'>Build SDK as a Dynamic Framework</h3>
+<pre class="highlight shell"><code>xcodebuild build <span class="se">\</span>
+  <span class="nt">-workspace</span> AppVerificationLibrary.xcworkspace <span class="se">\</span>
+  <span class="nt">-scheme</span> OMSDK
+</code></pre>
+<h3 id='run-sdk-tests' class='heading'>Run SDK tests</h3>
+<pre class="highlight shell"><code>xcodebuild <span class="nb">test</span> <span class="se">\</span>
+  <span class="nt">-workspace</span> AppVerificationLibrary.xcworkspace <span class="se">\</span>
+  <span class="nt">-scheme</span> AppVerificationLibrary <span class="se">\</span>
+  <span class="nt">-destination</span> <span class="s1">'platform=iOS Simulator,name=iPhone 11,OS=14.2'</span>
+</code></pre>
+<h3 id='build-reference-app' class='heading'>Build Reference App</h3>
+<pre class="highlight shell"><code>xcodebuild build <span class="se">\</span>
+  <span class="nt">-workspace</span> AppVerificationLibrary.xcworkspace <span class="nt">-scheme</span> OM-TestApp <span class="se">\</span>
+  <span class="nt">-configuration</span> Debug <span class="se">\</span>
+  <span class="nt">-destination</span> <span class="s1">'platform=iOS Simulator,name=iPhone 11,OS=14.2'</span> <span class="se">\</span>
+  <span class="nv">SYMROOT</span><span class="o">=</span>build
+</code></pre>
+<h3 id='run-reference-app-in-simulator' class='heading'>Run Reference App in Simulator</h3>
+<pre class="highlight shell"><code>open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
+ <span class="c"># ... wait until simulator is launched ...</span>
+xcrun simctl <span class="nb">install </span>booted ./build/Debug-iphonesimulator/OM-TestApp.app
+xcrun simctl launch booted com.iabtechlab.OM-TestApp
+</code></pre>
+<h2 id='generating-documentation' class='heading'>Generating Documentation</h2>
+
+<p>The documention for the public OMID API is generated with the tool
+<a href="https://github.com/realm/jazzy">Jazzy</a>.</p>
+<pre class="highlight shell"><code>jazzy <span class="nt">--objc</span> <span class="nt">--author</span> IAB <span class="se">\</span>
+  <span class="nt">--sdk</span> iphonesimulator <span class="se">\</span>
+  <span class="nt">--umbrella-header</span> AppVerificationLibrary/OMIDImports.h <span class="se">\</span>
+  <span class="nt">--framework-root</span> AppVerificationLibrary <span class="se">\</span>
+  <span class="nt">--module</span> OMSDK <span class="se">\</span>
+  <span class="nt">--module-version</span> 1.3 <span class="se">\</span>
+  <span class="nt">--undocumented-text</span> <span class="s1">''</span> <span class="se">\</span>
+  <span class="nt">--output</span> jazzy
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external noopener">IAB</a>. All rights reserved. (Last updated: 2023-03-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

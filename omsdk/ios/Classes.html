@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Classes  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Section/Classes" class="dashAnchor"></a>
+    <a title="Classes  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Open-Measurement-SDKiOS Docs</a> (0% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Open-Measurement-SDKiOS Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Classes  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/OMIDAdEvents.html">OMIDAdEvents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDAdSession.html">OMIDAdSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDAdSessionConfiguration.html">OMIDAdSessionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDAdSessionContext.html">OMIDAdSessionContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDPartner.html">OMIDPartner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDSDK.html">OMIDSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDScriptInjector.html">OMIDScriptInjector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDVASTProperties.html">OMIDVASTProperties</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDVerificationScriptResource.html">OMIDVerificationScriptResource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDVideoEvents.html">OMIDVideoEvents</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/OMIDErrorType.html">OMIDErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDInteractionType.html">OMIDInteractionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDOwner.html">OMIDOwner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDPlayerState.html">OMIDPlayerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDPosition.html">OMIDPosition</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Classes</h1>
+            <p>The following classes are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdEvents"></a>
+                    <a name="//apple_ref/objc/Class/OMIDAdEvents" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdEvents">OMIDAdEvents</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                        <a href="Classes/OMIDAdEvents.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">OMIDAdEvents</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="cm">/*
+ *  Initializes ad events instance associated with the supplied ad session.
+ *
+ * @param session The ad session associated with the ad events.
+ * @return A new ad events instance associated with the supplied ad session. Returns nil if the supplied ad session is nil or if an ad events instance has already been registered with the ad session.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithAdSession</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="Classes/OMIDAdSession.html">OMIDAdSession</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">session</span> <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies the ad session that an impression event has occurred.
+ *
+ *  When triggered all registered verification providers will be notified of this event.
+ *
+ * NOTE: the ad session will be automatically started if this method has been called first.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">impressionOccurredWithError</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">OMIDAdEvents</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSession"></a>
+                    <a name="//apple_ref/objc/Class/OMIDAdSession" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSession">OMIDAdSession</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                        <a href="Classes/OMIDAdSession.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">OMIDAdSession</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="cm">/*
+ *  The AdSession configuration is used for check owners.
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="Classes/OMIDAdSessionConfiguration.html">OMIDAdSessionConfiguration</a></span> <span class="o">*</span><span class="n">configuration</span><span class="p">;</span>
+<span class="cm">/*
+ *  The native view which is used for viewability tracking.
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIView</span> <span class="o">*</span><span class="n">mainAdView</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Initializes new ad session supplying the context.
+ *
+ * Note that creating an OMIDAdSession sends a message to the OM SDK JS Service running in the
+ * webview.  If the OM SDK JS Service has not loaded before the ad session is created, the
+ * message is lost, and the verification scripts will not receive any events.
+ *
+ * To prevent this, the implementation must wait until the webview finishes loading OM SDK
+ * JavaScript before creating the OMIDAdSession.  The easiest way is to create the OMIDAdSession
+ * in a webview delegate callback (-[WKNavigationDelegate webView:didFinishNavigation:] or
+ * -[UIWebViewDelegate webViewDidFinishLoad:]).  Alternatively, if an implementation can receive an
+ * HTML5 DOMContentLoaded event from the webview, it can create the OMIDAdSession in a message
+ * handler for that event.
+ *
+ * @param context The context that provides the required information for initialising the ad session.
+ * @return A new OMIDAdSession instance, or nil if the supplied context is nil.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithConfiguration</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="Classes/OMIDAdSessionConfiguration.html">OMIDAdSessionConfiguration</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">configuration</span>
+                              <span class="nf">adSessionContext</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="Classes/OMIDAdSessionContext.html">OMIDAdSessionContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span>
+                                         <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+
+<span class="cm">/*
+ *  Notifies all verification providers that the ad session has started and ad view tracking will begin.
+ * 
+ *  This method will have no affect if called after the ad session has finished.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">start</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all verification providers that the ad session has finished and all ad view tracking will stop.
+ *
+ *  This method will have no affect if called after the ad session has finished.
+ *
+ * Note that ending an OMID ad session sends a message to the verification scripts running inside
+ * the webview supplied by the integration.  So that the verification scripts have enough time to
+ * handle the 'sessionFinish' event, the integration must maintain a strong reference to the webview
+ * for at least 1.0 seconds after ending the session.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">finish</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Adds friendly obstruction which should then be excluded from all ad session viewability calculations.
+ *
+ *  This method will have no affect if called after the ad session has finished.
+ *
+ * @param friendlyObstruction The view to be excluded from all ad session viewability calculations.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addFriendlyObstruction</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">friendlyObstruction</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Removes registered friendly obstruction.
+ *
+ *  This method will have no affect if called after the ad session has finished.
+ *
+ * @param friendlyObstruction The view to be removed from the list of registered friendly obstructions.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeFriendlyObstruction</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">friendlyObstruction</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Utility method to remove all registered friendly obstructions.
+ *
+ *  This method will have no affect if called after the ad session has finished.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">removeAllFriendlyObstructions</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies the ad session that an error has occurred.
+ *
+ *  When triggered all registered verification providers will be notified of this event.
+ *
+ * @param errorType The type of error.
+ * @param message The message containing details of the error.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">logErrorWithType</span><span class="p">:(</span><span class="n"><a href="Enums/OMIDErrorType.html">OMIDErrorType</a></span><span class="p">)</span><span class="nv">errorType</span> <span class="nf">message</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">message</span>
+<span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">logError</span><span class="p">(</span><span class="n">withType</span><span class="o">:</span><span class="n">message</span><span class="o">:</span><span class="p">));</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">OMIDAdSession</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSessionConfiguration"></a>
+                    <a name="//apple_ref/objc/Class/OMIDAdSessionConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSessionConfiguration">OMIDAdSessionConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                        <a href="Classes/OMIDAdSessionConfiguration.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">OMIDAdSessionConfiguration</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="k">@property</span> <span class="n"><a href="Enums/OMIDOwner.html">OMIDOwner</a></span> <span class="n">impressionOwner</span><span class="p">;</span>
+<span class="k">@property</span> <span class="n"><a href="Enums/OMIDOwner.html">OMIDOwner</a></span> <span class="n">videoEventsOwner</span><span class="p">;</span>
+<span class="k">@property</span> <span class="n">BOOL</span> <span class="n">isolateVerificationScripts</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Returns nil and sets error if OMID isn't active or arguments are invalid.
+ *
+ *  @param impressionOwner providing details of who is responsible for triggering the impression event.
+ *  @param videoEventsOwner providing details of who is responsible for triggering video events. This is only required for video ad sessions and should be set to videoEventsOwner:OMIDNoneOwner for display ad sessions.
+ *  @param isolateVerificationScripts determines whether verification scripts will be placed in a sandboxed environment. This will not have any effect for native sessions.
+ */</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithImpressionOwner</span><span class="p">:(</span><span class="n"><a href="Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">)</span><span class="nv">impressionOwner</span>
+                                <span class="nf">videoEventsOwner</span><span class="p">:(</span><span class="n"><a href="Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">)</span><span class="nv">videoEventsOwner</span>
+                      <span class="nf">isolateVerificationScripts</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">isolateVerificationScripts</span>
+                                           <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="cp">#pragma mark - Deprecated Methods
+</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithImpressionOwner</span><span class="p">:(</span><span class="n"><a href="Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">)</span><span class="nv">impressionOwner</span>
+                                <span class="nf">videoEventsOwner</span><span class="p">:(</span><span class="n"><a href="Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">)</span><span class="nv">videoEventsOwner</span>
+                                           <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span> <span class="n">__deprecated_msg</span><span class="p">(</span><span class="s">"Use -initWithImpressionOwner:videoEventsOwner:isolateVerificationScripts:error: instead."</span><span class="p">);</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">OMIDAdSessionConfiguration</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSessionContext"></a>
+                    <a name="//apple_ref/objc/Class/OMIDAdSessionContext" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSessionContext">OMIDAdSessionContext</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                        <a href="Classes/OMIDAdSessionContext.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">OMIDAdSessionContext</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">null_unspecified</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Initializes a new ad session context providing reference to partner and web view where OMID JS has been injected.
+ *
+ *  Calling this method will set the ad session type to “html”.
+ * &lt;p&gt;
+ * NOTE: any attempt to create a new ad session will fail if OMID has not been activated (see {@link OMIDSDK} class for more information).
+ *
+ * @param partner Details of the integration partner responsible for the ad session.
+ * @param webView The webView responsible for serving the ad content. Must be a UIWebView or WKWebView instance. The receiver holds a weak reference only.
+ * @return A new HTML context instance. Returns nil if OMID has not been activated or if any of the parameters are nil.
+ * @see OMIDSDK
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithPartner</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="Classes/OMIDPartner.html">OMIDPartner</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">partner</span>
+                                 <span class="nf">webView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">webView</span>
+               <span class="nf">customReferenceIdentifier</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">customReferenceIdentifier</span>
+                                   <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Initializes a new ad session context providing reference to partner and a list of script resources which should be managed by OMID.
+ *
+ *  Calling this method will set the ad session type to “native”.
+ * &lt;p&gt;
+ * NOTE: any attempt to create a new ad session will fail if OMID has not been activated (see {@link OMIDSDK} class for more information).
+ *
+ * @param partner Details of the integration partner responsible for the ad session.
+ * @param resources The array of all verification providers who expect to receive OMID event data. Must contain at least one verification script. The receiver creates a deep copy of the array.
+ * @return A new native context instance. Returns nil if OMID has not been activated or if any of the parameters are invalid.
+ * @see OMIDSDK
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithPartner</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="Classes/OMIDPartner.html">OMIDPartner</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">partner</span>
+                                  <span class="nf">script</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">script</span>
+                               <span class="nf">resources</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="Classes/OMIDVerificationScriptResource.html">OMIDVerificationScriptResource</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">resources</span>
+               <span class="nf">customReferenceIdentifier</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">customReferenceIdentifier</span>
+                                   <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">OMIDAdSessionContext</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDPartner"></a>
+                    <a name="//apple_ref/objc/Class/OMIDPartner" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDPartner">OMIDPartner</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                        <a href="Classes/OMIDPartner.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">OMIDPartner</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">versionString</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Initializes new partner instance providing both name and versionString.
+ *
+ *  Both name and version are mandatory.
+ *
+ * @param name It is used to uniquely identify the integration partner.
+ * @param versionString It is used to uniquely identify the integration partner.
+ * @return A new partner instance, or nil if any of the parameters are either null or blank
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithName</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">name</span>
+                        <span class="nf">versionString</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">versionString</span><span class="p">;</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">null_unspecified</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">OMIDPartner</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDSDK"></a>
+                    <a name="//apple_ref/objc/Class/OMIDSDK" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDSDK">OMIDSDK</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                        <a href="Classes/OMIDSDK.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">OMIDSDK</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="cm">/*
+ *  The current semantic version of the integrated OMID library.
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">versionString</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Allows the integration partner to check that they are compatible with the running OMID library version.
+ *
+ * @param OMIDAPIVersion The version of OMID library integrated by the partner.
+ * @return YES if the version supplied is compatible with the integrated OMID library version.
+ *
+ * Note: Planned to be deprecated in next major release
+ */</span>
+
+<span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">isCompatibleWithOMIDAPIVersion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">OMIDAPIVersion</span>
+<span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">isCompatible</span><span class="p">(</span><span class="n">withOMIDAPIVersion</span><span class="o">:</span><span class="p">));</span>
+
+<span class="cm">/*
+ *  Shared OMIDSDK instance.
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">class</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">OMIDSDK</span> <span class="o">*</span><span class="n">sharedInstance</span>
+<span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">shared</span><span class="p">);</span>
+
+<span class="cm">/*
+ *  A Boolean value indicating whether the OMID library has been activated.
+ *
+ *  The value of this property is YES if the OMID library has already been activated. Allows the integration partner to check that they are compatible with the running OMID library version.
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">atomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span> <span class="o">=</span> <span class="n">isActive</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">active</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Enables the integration partner to activate OMID prior to calling any other API methods.
+ *
+ * @param OMIDAPIVersion The version of OMID library integrated by the partner.
+ * @param error If an error occurs, contains an NSError object that describes the problem.
+ * @return YES if activation was successful when checking the supplied version number for compatibility.
+ *
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">activateWithOMIDAPIVersion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">OMIDAPIVersion</span>
+                             <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">OMIDSDK</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDScriptInjector"></a>
+                    <a name="//apple_ref/objc/Class/OMIDScriptInjector" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDScriptInjector">OMIDScriptInjector</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                        <a href="Classes/OMIDScriptInjector.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">OMIDScriptInjector</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="cm">/*
+ Injects the downloaded OMID JS content into the served HTML.
+ @param scriptContent containing the OMID JS service content to be injected into the hidden tracking web view.
+ @param html of the tag content which should be modified to include the downloaded OMID JS content.
+ @param error If an error occurs, contains an NSError object.
+ @return modified HTML including OMID JS or nil if an error occurs.
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nf">injectScriptContent</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scriptContent</span>
+                                  <span class="nf">intoHTML</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">html</span>
+                                     <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">OMIDScriptInjector</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDVASTProperties"></a>
+                    <a name="//apple_ref/objc/Class/OMIDVASTProperties" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDVASTProperties">OMIDVASTProperties</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                        <a href="Classes/OMIDVASTProperties.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">OMIDVASTProperties</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span> <span class="o">=</span> <span class="n">isSkippable</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">skippable</span><span class="p">;</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">skipOffset</span><span class="p">;</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span> <span class="o">=</span> <span class="n">isAutoPlay</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">autoPlay</span><span class="p">;</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Enums/OMIDPosition.html">OMIDPosition</a></span> <span class="n">position</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  This method enables the video player to create a new VAST properties instance for skippable video ad placement.
+ *
+ * @param skipOffset The number of seconds before the skip button is presented.
+ * @param autoPlay Determines whether the video will auto-play content.
+ * @param position The position of the video in relation to other content.
+ * @return A new instance of VAST properties.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithSkipOffset</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">skipOffset</span>
+                                  <span class="nf">autoPlay</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">autoPlay</span>
+                                  <span class="nf">position</span><span class="p">:(</span><span class="n"><a href="Enums/OMIDPosition.html">OMIDPosition</a></span><span class="p">)</span><span class="nv">position</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  This method enables the video player to create a new VAST properties instance for non-skippable video ad placement.
+ *
+ * @param autoPlay Determines whether the video will auto-play content.
+ * @param position The position of the video in relation to other content.
+ * @return A new instance of VAST properties.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithAutoPlay</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">autoPlay</span>
+                                <span class="nf">position</span><span class="p">:(</span><span class="n"><a href="Enums/OMIDPosition.html">OMIDPosition</a></span><span class="p">)</span><span class="nv">position</span><span class="p">;</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">null_unspecified</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">OMIDVASTProperties</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDVerificationScriptResource"></a>
+                    <a name="//apple_ref/objc/Class/OMIDVerificationScriptResource" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDVerificationScriptResource">OMIDVerificationScriptResource</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                        <a href="Classes/OMIDVerificationScriptResource.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">OMIDVerificationScriptResource</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">URL</span><span class="p">;</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">vendorKey</span><span class="p">;</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">parameters</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Initializes new verification script resource instance which requires vendor specific verification parameters.
+ *
+ *  When calling this method all arguments are mandatory.
+ *
+ * @param vendorKey It is used to uniquely identify the verification provider.
+ * @param URL The URL to be injected into the OMID managed JavaScript execution environment.
+ * @param parameters The parameters which the verification provider script is expecting for the ad session.
+ * @return A new verification script resource instance, or nil if any of the parameters are either null or blank.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">URL</span>
+                           <span class="nf">vendorKey</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">vendorKey</span>
+                          <span class="nf">parameters</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">parameters</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Initializes new verification script resource instance which does not require any vendor specific verification parameters.
+ *
+ *  When calling this method all arguments are mandatory.
+ *
+ * @param URL The URL to be injected into the OMID managed JavaScript execution environment.
+ * @return A new verification script resource instance, or nil if URL is nil or blank.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">URL</span><span class="p">;</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">null_unspecified</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">OMIDVerificationScriptResource</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDVideoEvents"></a>
+                    <a name="//apple_ref/objc/Class/OMIDVideoEvents" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDVideoEvents">OMIDVideoEvents</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                        <a href="Classes/OMIDVideoEvents.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">OMIDVideoEvents</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="cm">/*
+ *  Initializes video events instance for the associated ad session.
+ *  Any attempt to create a video events instance will fail if the supplied ad session has already started.
+ *
+ * @param session The ad session associated with the ad events.
+ * @return A new video events instance. Returns nil if the supplied ad session is nil or if a video events instance has already been registered with the ad session or if a video events instance has been created after the ad session has started.
+ * @see OMIDAdSession
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithAdSession</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="Classes/OMIDAdSession.html">OMIDAdSession</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">session</span> <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all video listeners that video content has been loaded and ready to start playing.
+ *
+ * @param vastProperties The parameters containing static information about the video placement.
+ * @see OMIDVASTProperties
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadedWithVastProperties</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="Classes/OMIDVASTProperties.html">OMIDVASTProperties</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">vastProperties</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all video listeners that video content has started playing.
+ *
+ * @param duration The duration of the selected video media (in seconds).
+ * @param videoPlayerVolume The volume from the native video player with a range between 0 and 1.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startWithDuration</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">duration</span>
+        <span class="nf">videoPlayerVolume</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">videoPlayerVolume</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all video listeners that video playback has reached the first quartile.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">firstQuartile</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all video listeners that video playback has reached the midpoint.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">midpoint</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all video listeners that video playback has reached the third quartile.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">thirdQuartile</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all video listeners that video playback is complete.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">complete</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all video listeners that video playback has paused after a user interaction.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">pause</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all video listeners that video playback has resumed (after being paused) after a user interaction.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">resume</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all video listeners that video playback has stopped as a user skip interaction.
+ *  Once skipped video it should not be possible for the video to resume playing content.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">skipped</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all video listeners that video playback has stopped and started buffering.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">bufferStart</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all video listeners that buffering has finished and video playback has resumed.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">bufferFinish</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all video listeners that the video player volume has changed.
+ *
+ * @param playerVolume The volume from the native video player with a range between 0 and 1.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">volumeChangeTo</span><span class="p">:(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">playerVolume</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all video listeners that video player state has changed. See {@link OMIDPlayerState} for list of supported states.
+ *
+ * @param playerState The latest video player state.
+ * @see OMIDPlayerState
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playerStateChangeTo</span><span class="p">:(</span><span class="n"><a href="Enums/OMIDPlayerState.html">OMIDPlayerState</a></span><span class="p">)</span><span class="nv">playerState</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all video listeners that the user has performed an ad interaction. See {@link OMIDInteractionType} fro list of supported types.
+ *
+ * @param interactionType The latest user integration.
+ * @see OMIDInteractionType
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">adUserInteractionWithType</span><span class="p">:(</span><span class="n"><a href="Enums/OMIDInteractionType.html">OMIDInteractionType</a></span><span class="p">)</span><span class="nv">interactionType</span>
+<span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">adUserInteraction</span><span class="p">(</span><span class="n">withType</span><span class="o">:</span><span class="p">));</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">OMIDVideoEvents</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">IAB</a>. All rights reserved. (Last updated: 2019-04-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

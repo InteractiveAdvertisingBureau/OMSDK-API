@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OMIDAdSessionConfiguration Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/OMIDAdSessionConfiguration" class="dashAnchor"></a>
+    <a title="OMIDAdSessionConfiguration Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Open-Measurement-SDKiOS Docs</a> (0% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Open-Measurement-SDKiOS Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        OMIDAdSessionConfiguration Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDAdEvents.html">OMIDAdEvents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDAdSession.html">OMIDAdSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDAdSessionConfiguration.html">OMIDAdSessionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDAdSessionContext.html">OMIDAdSessionContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDPartner.html">OMIDPartner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDSDK.html">OMIDSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDScriptInjector.html">OMIDScriptInjector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDVASTProperties.html">OMIDVASTProperties</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDVerificationScriptResource.html">OMIDVerificationScriptResource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDVideoEvents.html">OMIDVideoEvents</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDErrorType.html">OMIDErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDInteractionType.html">OMIDInteractionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDOwner.html">OMIDOwner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDPlayerState.html">OMIDPlayerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDPosition.html">OMIDPosition</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>OMIDAdSessionConfiguration</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">OMIDAdSessionConfiguration</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="k">@property</span> <span class="n"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span> <span class="n">impressionOwner</span><span class="p">;</span>
+<span class="k">@property</span> <span class="n"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span> <span class="n">videoEventsOwner</span><span class="p">;</span>
+<span class="k">@property</span> <span class="n">BOOL</span> <span class="n">isolateVerificationScripts</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Returns nil and sets error if OMID isn't active or arguments are invalid.
+ *
+ *  @param impressionOwner providing details of who is responsible for triggering the impression event.
+ *  @param videoEventsOwner providing details of who is responsible for triggering video events. This is only required for video ad sessions and should be set to videoEventsOwner:OMIDNoneOwner for display ad sessions.
+ *  @param isolateVerificationScripts determines whether verification scripts will be placed in a sandboxed environment. This will not have any effect for native sessions.
+ */</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithImpressionOwner</span><span class="p">:(</span><span class="n"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">)</span><span class="nv">impressionOwner</span>
+                                <span class="nf">videoEventsOwner</span><span class="p">:(</span><span class="n"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">)</span><span class="nv">videoEventsOwner</span>
+                      <span class="nf">isolateVerificationScripts</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">isolateVerificationScripts</span>
+                                           <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="cp">#pragma mark - Deprecated Methods
+</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithImpressionOwner</span><span class="p">:(</span><span class="n"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">)</span><span class="nv">impressionOwner</span>
+                                <span class="nf">videoEventsOwner</span><span class="p">:(</span><span class="n"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">)</span><span class="nv">videoEventsOwner</span>
+                                           <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span> <span class="n">__deprecated_msg</span><span class="p">(</span><span class="s">"Use -initWithImpressionOwner:videoEventsOwner:isolateVerificationScripts:error: instead."</span><span class="p">);</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>Properties</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSessionConfiguration(py)impressionOwner"></a>
+                    <a name="//apple_ref/objc/Property/impressionOwner" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSessionConfiguration(py)impressionOwner">impressionOwner</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="n"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span> <span class="n">impressionOwner</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">impressionOwner</span><span class="p">:</span> <span class="kt"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSessionConfiguration(py)videoEventsOwner"></a>
+                    <a name="//apple_ref/objc/Property/videoEventsOwner" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSessionConfiguration(py)videoEventsOwner">videoEventsOwner</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="n"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span> <span class="n">videoEventsOwner</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">videoEventsOwner</span><span class="p">:</span> <span class="kt"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSessionConfiguration(py)isolateVerificationScripts"></a>
+                    <a name="//apple_ref/objc/Property/isolateVerificationScripts" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSessionConfiguration(py)isolateVerificationScripts">isolateVerificationScripts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="n">BOOL</span> <span class="n">isolateVerificationScripts</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isolateVerificationScripts</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSessionConfiguration(im)initWithImpressionOwner:videoEventsOwner:isolateVerificationScripts:error:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithImpressionOwner:videoEventsOwner:isolateVerificationScripts:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSessionConfiguration(im)initWithImpressionOwner:videoEventsOwner:isolateVerificationScripts:error:">-initWithImpressionOwner:videoEventsOwner:isolateVerificationScripts:error:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithImpressionOwner</span><span class="p">:(</span><span class="n"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">)</span><span class="nv">impressionOwner</span>
+                                <span class="nf">videoEventsOwner</span><span class="p">:(</span><span class="n"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">)</span><span class="nv">videoEventsOwner</span>
+                      <span class="nf">isolateVerificationScripts</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">isolateVerificationScripts</span>
+                                           <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">impressionOwner</span><span class="p">:</span> <span class="kt"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">,</span> <span class="nv">videoEventsOwner</span><span class="p">:</span> <span class="kt"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">,</span> <span class="nv">isolateVerificationScripts</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Deprecated%20Methods"></a>
+                <a name="//apple_ref/objc/Section/Deprecated Methods" class="dashAnchor"></a>
+                <a href="#/Deprecated%20Methods">
+                  <h3 class="section-name">Deprecated Methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSessionConfiguration(im)initWithImpressionOwner:videoEventsOwner:error:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithImpressionOwner:videoEventsOwner:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSessionConfiguration(im)initWithImpressionOwner:videoEventsOwner:error:">-initWithImpressionOwner:videoEventsOwner:error:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithImpressionOwner</span><span class="p">:(</span><span class="n"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">)</span><span class="nv">impressionOwner</span>
+                                <span class="nf">videoEventsOwner</span><span class="p">:(</span><span class="n"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">)</span><span class="nv">videoEventsOwner</span>
+                                           <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span> <span class="n">__deprecated_msg</span><span class="p">(</span><span class="s">"Use -initWithImpressionOwner:videoEventsOwner:isolateVerificationScripts:error: instead."</span><span class="p">);</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">impressionOwner</span><span class="p">:</span> <span class="kt"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">,</span> <span class="nv">videoEventsOwner</span><span class="p">:</span> <span class="kt"><a href="../Enums/OMIDOwner.html">OMIDOwner</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">IAB</a>. All rights reserved. (Last updated: 2019-04-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

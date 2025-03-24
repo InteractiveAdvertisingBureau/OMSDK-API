@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OMIDAdSession Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/OMIDAdSession" class="dashAnchor"></a>
+    <a title="OMIDAdSession Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Open-Measurement-SDKiOS Docs</a> (0% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Open-Measurement-SDKiOS Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        OMIDAdSession Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDAdEvents.html">OMIDAdEvents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDAdSession.html">OMIDAdSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDAdSessionConfiguration.html">OMIDAdSessionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDAdSessionContext.html">OMIDAdSessionContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDPartner.html">OMIDPartner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDSDK.html">OMIDSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDScriptInjector.html">OMIDScriptInjector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDVASTProperties.html">OMIDVASTProperties</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDVerificationScriptResource.html">OMIDVerificationScriptResource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OMIDVideoEvents.html">OMIDVideoEvents</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDErrorType.html">OMIDErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDInteractionType.html">OMIDInteractionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDOwner.html">OMIDOwner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDPlayerState.html">OMIDPlayerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OMIDPosition.html">OMIDPosition</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>OMIDAdSession</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">OMIDAdSession</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="cm">/*
+ *  The AdSession configuration is used for check owners.
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/OMIDAdSessionConfiguration.html">OMIDAdSessionConfiguration</a></span> <span class="o">*</span><span class="n">configuration</span><span class="p">;</span>
+<span class="cm">/*
+ *  The native view which is used for viewability tracking.
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIView</span> <span class="o">*</span><span class="n">mainAdView</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Initializes new ad session supplying the context.
+ *
+ * Note that creating an OMIDAdSession sends a message to the OM SDK JS Service running in the
+ * webview.  If the OM SDK JS Service has not loaded before the ad session is created, the
+ * message is lost, and the verification scripts will not receive any events.
+ *
+ * To prevent this, the implementation must wait until the webview finishes loading OM SDK
+ * JavaScript before creating the OMIDAdSession.  The easiest way is to create the OMIDAdSession
+ * in a webview delegate callback (-[WKNavigationDelegate webView:didFinishNavigation:] or
+ * -[UIWebViewDelegate webViewDidFinishLoad:]).  Alternatively, if an implementation can receive an
+ * HTML5 DOMContentLoaded event from the webview, it can create the OMIDAdSession in a message
+ * handler for that event.
+ *
+ * @param context The context that provides the required information for initialising the ad session.
+ * @return A new OMIDAdSession instance, or nil if the supplied context is nil.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithConfiguration</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/OMIDAdSessionConfiguration.html">OMIDAdSessionConfiguration</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">configuration</span>
+                              <span class="nf">adSessionContext</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/OMIDAdSessionContext.html">OMIDAdSessionContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span>
+                                         <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+
+<span class="cm">/*
+ *  Notifies all verification providers that the ad session has started and ad view tracking will begin.
+ * 
+ *  This method will have no affect if called after the ad session has finished.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">start</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies all verification providers that the ad session has finished and all ad view tracking will stop.
+ *
+ *  This method will have no affect if called after the ad session has finished.
+ *
+ * Note that ending an OMID ad session sends a message to the verification scripts running inside
+ * the webview supplied by the integration.  So that the verification scripts have enough time to
+ * handle the 'sessionFinish' event, the integration must maintain a strong reference to the webview
+ * for at least 1.0 seconds after ending the session.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">finish</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Adds friendly obstruction which should then be excluded from all ad session viewability calculations.
+ *
+ *  This method will have no affect if called after the ad session has finished.
+ *
+ * @param friendlyObstruction The view to be excluded from all ad session viewability calculations.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addFriendlyObstruction</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">friendlyObstruction</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Removes registered friendly obstruction.
+ *
+ *  This method will have no affect if called after the ad session has finished.
+ *
+ * @param friendlyObstruction The view to be removed from the list of registered friendly obstructions.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeFriendlyObstruction</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">friendlyObstruction</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Utility method to remove all registered friendly obstructions.
+ *
+ *  This method will have no affect if called after the ad session has finished.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">removeAllFriendlyObstructions</span><span class="p">;</span>
+
+<span class="cm">/*
+ *  Notifies the ad session that an error has occurred.
+ *
+ *  When triggered all registered verification providers will be notified of this event.
+ *
+ * @param errorType The type of error.
+ * @param message The message containing details of the error.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">logErrorWithType</span><span class="p">:(</span><span class="n"><a href="../Enums/OMIDErrorType.html">OMIDErrorType</a></span><span class="p">)</span><span class="nv">errorType</span> <span class="nf">message</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">message</span>
+<span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">logError</span><span class="p">(</span><span class="n">withType</span><span class="o">:</span><span class="n">message</span><span class="o">:</span><span class="p">));</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>Properties</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSession(py)configuration"></a>
+                    <a name="//apple_ref/objc/Property/configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSession(py)configuration">configuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/OMIDAdSessionConfiguration.html">OMIDAdSessionConfiguration</a></span> <span class="o">*</span><span class="n">configuration</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/OMIDAdSessionConfiguration.html">OMIDAdSessionConfiguration</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSession(py)mainAdView"></a>
+                    <a name="//apple_ref/objc/Property/mainAdView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSession(py)mainAdView">mainAdView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIView</span> <span class="o">*</span><span class="n">mainAdView</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">mainAdView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSession(im)initWithConfiguration:adSessionContext:error:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithConfiguration:adSessionContext:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSession(im)initWithConfiguration:adSessionContext:error:">-initWithConfiguration:adSessionContext:error:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithConfiguration</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/OMIDAdSessionConfiguration.html">OMIDAdSessionConfiguration</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">configuration</span>
+                              <span class="nf">adSessionContext</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/OMIDAdSessionContext.html">OMIDAdSessionContext</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">context</span>
+                                         <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/OMIDAdSessionConfiguration.html">OMIDAdSessionConfiguration</a></span><span class="p">,</span> <span class="n">adSessionContext</span> <span class="nv">context</span><span class="p">:</span> <span class="kt"><a href="../Classes/OMIDAdSessionContext.html">OMIDAdSessionContext</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSession(im)start"></a>
+                    <a name="//apple_ref/objc/Method/-start" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSession(im)start">-start</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">start</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">start</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSession(im)finish"></a>
+                    <a name="//apple_ref/objc/Method/-finish" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSession(im)finish">-finish</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">finish</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">finish</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSession(im)addFriendlyObstruction:"></a>
+                    <a name="//apple_ref/objc/Method/-addFriendlyObstruction:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSession(im)addFriendlyObstruction:">-addFriendlyObstruction:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addFriendlyObstruction</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">friendlyObstruction</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addFriendlyObstruction</span><span class="p">(</span><span class="n">_</span> <span class="nv">friendlyObstruction</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSession(im)removeFriendlyObstruction:"></a>
+                    <a name="//apple_ref/objc/Method/-removeFriendlyObstruction:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSession(im)removeFriendlyObstruction:">-removeFriendlyObstruction:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeFriendlyObstruction</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">friendlyObstruction</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeFriendlyObstruction</span><span class="p">(</span><span class="n">_</span> <span class="nv">friendlyObstruction</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSession(im)removeAllFriendlyObstructions"></a>
+                    <a name="//apple_ref/objc/Method/-removeAllFriendlyObstructions" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSession(im)removeAllFriendlyObstructions">-removeAllFriendlyObstructions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">removeAllFriendlyObstructions</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeAllFriendlyObstructions</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)OMIDAdSession(im)logErrorWithType:message:"></a>
+                    <a name="//apple_ref/objc/Method/-logErrorWithType:message:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)OMIDAdSession(im)logErrorWithType:message:">-logErrorWithType:message:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Properties</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">logErrorWithType</span><span class="p">:(</span><span class="n"><a href="../Enums/OMIDErrorType.html">OMIDErrorType</a></span><span class="p">)</span><span class="nv">errorType</span> <span class="nf">message</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">message</span>
+<span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">logError</span><span class="p">(</span><span class="n">withType</span><span class="o">:</span><span class="n">message</span><span class="o">:</span><span class="p">));</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">logError</span><span class="p">(</span><span class="n">withType</span> <span class="nv">errorType</span><span class="p">:</span> <span class="kt"><a href="../Enums/OMIDErrorType.html">OMIDErrorType</a></span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">IAB</a>. All rights reserved. (Last updated: 2019-04-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

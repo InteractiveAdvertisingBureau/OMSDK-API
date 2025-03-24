@@ -1,0 +1,152 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 103,
+      "symbol": "OMIDAdSessionConfiguration.creativeType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 104,
+      "symbol": "OMIDAdSessionConfiguration.impressionType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 105,
+      "symbol": "OMIDAdSessionConfiguration.impressionOwner",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 106,
+      "symbol": "OMIDAdSessionConfiguration.mediaEventsOwner",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 107,
+      "symbol": "OMIDAdSessionConfiguration.isolateVerificationScripts",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDAdSessionContext.h",
+      "line": 22,
+      "symbol": "OMIDAdSessionContext.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDPartner.h",
+      "line": 15,
+      "symbol": "OMIDPartner.name",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDPartner.h",
+      "line": 16,
+      "symbol": "OMIDPartner.versionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDPartner.h",
+      "line": 30,
+      "symbol": "OMIDPartner.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDSDK.h",
+      "line": 10,
+      "symbol": "",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.unexposed",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDSDK.h",
+      "line": 58,
+      "symbol": "",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.unexposed",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDScriptInjector.h",
+      "line": 22,
+      "symbol": "OMIDScriptInjector.+injectScriptContent:intoHTML:error:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 37,
+      "symbol": "OMIDVASTProperties.skippable",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 38,
+      "symbol": "OMIDVASTProperties.skipOffset",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 39,
+      "symbol": "OMIDVASTProperties.autoPlay",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 40,
+      "symbol": "OMIDVASTProperties.position",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 64,
+      "symbol": "OMIDVASTProperties.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDVerificationScriptResource.h",
+      "line": 15,
+      "symbol": "OMIDVerificationScriptResource.URL",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDVerificationScriptResource.h",
+      "line": 16,
+      "symbol": "OMIDVerificationScriptResource.vendorKey",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDVerificationScriptResource.h",
+      "line": 17,
+      "symbol": "OMIDVerificationScriptResource.parameters",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS/AppVerificationLibrary/OMIDVerificationScriptResource.h",
+      "line": 43,
+      "symbol": "OMIDVerificationScriptResource.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/arun/Desktop/IAB_Doc_Generate/Open-Measurement-SDKiOS"
+}

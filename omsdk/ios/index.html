@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Open-Measurement-SDKiOS  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Open-Measurement-SDKiOS  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Open-Measurement-SDKiOS Docs</a> (0% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Open-Measurement-SDKiOS Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Open-Measurement-SDKiOS  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/OMIDAdEvents.html">OMIDAdEvents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDAdSession.html">OMIDAdSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDAdSessionConfiguration.html">OMIDAdSessionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDAdSessionContext.html">OMIDAdSessionContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDPartner.html">OMIDPartner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDSDK.html">OMIDSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDScriptInjector.html">OMIDScriptInjector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDVASTProperties.html">OMIDVASTProperties</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDVerificationScriptResource.html">OMIDVerificationScriptResource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OMIDVideoEvents.html">OMIDVideoEvents</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/OMIDErrorType.html">OMIDErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDInteractionType.html">OMIDInteractionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDOwner.html">OMIDOwner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDPlayerState.html">OMIDPlayerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OMIDPosition.html">OMIDPosition</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='open-measurement-sdkios' class='heading'>Open-Measurement-SDKiOS</h1>
+
+<p><a href="https://travis-ci.com/InteractiveAdvertisingBureau/Open-Measurement-SDKiOS"><img src="https://travis-ci.com/InteractiveAdvertisingBureau/Open-Measurement-SDKiOS.svg?token=Z1BptHibQ4qBPBHmY8Nc&branch=master" alt="Build Status"></a></p>
+<h2 id='overview' class='heading'>Overview</h2>
+
+<p>This repository contains the native iOS code of Open Measurement SDK, also known
+as OM SDK.</p>
+<h2 id='folder-structure' class='heading'>Folder Structure</h2>
+
+<p>Files are organized as a standard iOS project for Xcode and Cocoapods.</p>
+<h3 id='code-appverificationlibrary-code' class='heading'><code>AppVerificationLibrary/</code></h3>
+
+<p>Contains the source code for the SDK. </p>
+<h3 id='code-appverificationlibrary-tests-code' class='heading'><code>AppVerificationLibrary-Tests/</code></h3>
+
+<p>Contains the source code for the unit tests. </p>
+<h3 id='code-appverificationlibrary-xcodeproj-code-and-code-appverificationlibrary-xcworkspace-code' class='heading'><code>AppVerificationLibrary.xcodeproj</code> and <code>AppVerificationLibrary.xcworkspace</code></h3>
+
+<p>The Xcode project and workspace.  </p>
+<h3 id='code-config-xcconfig-code-and-code-configtest-xcconfig-code' class='heading'><code>Config.xcconfig</code> and <code>ConfigTest.xcconfig</code></h3>
+
+<p>Textual configuration files that supplement the settings in the <code>.xcodeproj</code>
+file.</p>
+<h3 id='code-podfile-code-and-code-podfile-lock-code' class='heading'><code>Podfile</code> and <code>Podfile.lock</code></h3>
+
+<p>Cocoapods configuration files.</p>
+<h3 id='code-docs-code' class='heading'><code>docs/</code></h3>
+
+<p>Implementation instructions</p>
+<h2 id='other-important-files' class='heading'>Other important files</h2>
+<h3 id='code-changelog-md-code' class='heading'><code>CHANGELOG.md</code></h3>
+
+<p>All notable changes to the project are documented in the changelog.
+The format is based on <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>.</p>
+<h3 id='code-config-xcconfig-code' class='heading'><code>Config.xcconfig</code></h3>
+
+<p>Xcode configuration file which includes semantic version number and partner
+namespace of this code release.  </p>
+<h2 id='developer-setup' class='heading'>Developer Setup</h2>
+
+<p>The OM SDK library is built as an Xcode project.   The library does not have any
+external dependencies,  but the tests make use of OCMock and XcodeCoverage,
+which are installed via Cocoapods.</p>
+<h3 id='prerequisites' class='heading'>Prerequisites</h3>
+
+<ul>
+<li>Xcode 8.3 or later</li>
+<li>Cocoapods 1.2.1 or later — Follow the installation instructions at the 
+<a href="https://guides.cocoapods.org/using/getting-started.html">Cocoapods website</a>.<br></li>
+</ul>
+<h3 id='prepare-workspace-with-cocoapods' class='heading'>Prepare workspace with Cocoapods</h3>
+
+<p>If you have a fresh checkout of the Git repo, you need to install the
+dependencies via Cocoapods.
+Open a shell in your checkout directory and enter</p>
+<pre class="highlight shell"><code>pod update
+</code></pre>
+
+<p>After this step, the project is ready to be built.</p>
+<h2 id='building' class='heading'>Building</h2>
+
+<p>Build the SDK and run tests using Xcode.  Open the workspace file 
+(<code>AppVerificationLibrary.xcworkspace</code>)</p>
+
+<ul>
+<li>The <code>AppVerificationLibrary</code> target builds the library.</li>
+<li>The <code>AppVerificationLibrary-Tests</code> target performs the unit tests.</li>
+</ul>
+
+<p><em>TO DO: Document how to perform a build using the command line.</em></p>
+<h2 id='implementation-instructions' class='heading'>Implementation Instructions</h2>
+
+<p>Please see the detailed instructions in the <a href="docs/index.md">docs directory</a>. </p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">IAB</a>. All rights reserved. (Last updated: 2019-04-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

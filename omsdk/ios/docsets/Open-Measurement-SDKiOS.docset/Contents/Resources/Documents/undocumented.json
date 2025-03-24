@@ -1,0 +1,656 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdEvents.h",
+      "line": 15,
+      "symbol": "OMIDAdEvents",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdEvents.h",
+      "line": 23,
+      "symbol": "OMIDAdEvents.-initWithAdSession:error:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdEvents.h",
+      "line": 32,
+      "symbol": "OMIDAdEvents.-impressionOccurredWithError:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSession.h",
+      "line": 12,
+      "symbol": "OMIDErrorType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSession.h",
+      "line": 12,
+      "symbol": "OMIDErrorType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSession.h",
+      "line": 13,
+      "symbol": "OMIDErrorType.OMIDErrorGeneric",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSession.h",
+      "line": 14,
+      "symbol": "OMIDErrorType.OMIDErrorVideo",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSession.h",
+      "line": 21,
+      "symbol": "OMIDAdSession",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSession.h",
+      "line": 26,
+      "symbol": "OMIDAdSession.configuration",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSession.h",
+      "line": 30,
+      "symbol": "OMIDAdSession.mainAdView",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSession.h",
+      "line": 49,
+      "symbol": "OMIDAdSession.-initWithConfiguration:adSessionContext:error:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSession.h",
+      "line": 59,
+      "symbol": "OMIDAdSession.-start",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSession.h",
+      "line": 71,
+      "symbol": "OMIDAdSession.-finish",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSession.h",
+      "line": 80,
+      "symbol": "OMIDAdSession.-addFriendlyObstruction:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSession.h",
+      "line": 89,
+      "symbol": "OMIDAdSession.-removeFriendlyObstruction:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSession.h",
+      "line": 96,
+      "symbol": "OMIDAdSession.-removeAllFriendlyObstructions",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSession.h",
+      "line": 106,
+      "symbol": "OMIDAdSession.-logErrorWithType:message:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 10,
+      "symbol": "OMIDOwner",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 10,
+      "symbol": "OMIDOwner",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 11,
+      "symbol": "OMIDOwner.OMIDJavaScriptOwner",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 12,
+      "symbol": "OMIDOwner.OMIDNativeOwner",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 13,
+      "symbol": "OMIDOwner.OMIDNoneOwner",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 16,
+      "symbol": "OMIDAdSessionConfiguration",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 18,
+      "symbol": "OMIDAdSessionConfiguration.impressionOwner",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 19,
+      "symbol": "OMIDAdSessionConfiguration.videoEventsOwner",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 20,
+      "symbol": "OMIDAdSessionConfiguration.isolateVerificationScripts",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 29,
+      "symbol": "OMIDAdSessionConfiguration.-initWithImpressionOwner:videoEventsOwner:isolateVerificationScripts:error:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionConfiguration.h",
+      "line": 36,
+      "symbol": "OMIDAdSessionConfiguration.-initWithImpressionOwner:videoEventsOwner:error:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionContext.h",
+      "line": 12,
+      "symbol": "OMIDAdSessionContext",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionContext.h",
+      "line": 14,
+      "symbol": "OMIDAdSessionContext.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionContext.h",
+      "line": 28,
+      "symbol": "OMIDAdSessionContext.-initWithPartner:webView:customReferenceIdentifier:error:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDAdSessionContext.h",
+      "line": 45,
+      "symbol": "OMIDAdSessionContext.-initWithPartner:script:resources:customReferenceIdentifier:error:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDPartner.h",
+      "line": 13,
+      "symbol": "OMIDPartner",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDPartner.h",
+      "line": 15,
+      "symbol": "OMIDPartner.name",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDPartner.h",
+      "line": 16,
+      "symbol": "OMIDPartner.versionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDPartner.h",
+      "line": 27,
+      "symbol": "OMIDPartner.-initWithName:versionString:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDPartner.h",
+      "line": 30,
+      "symbol": "OMIDPartner.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDSDK.h",
+      "line": 22,
+      "symbol": "OMIDSDK",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDSDK.h",
+      "line": 27,
+      "symbol": "OMIDSDK.+versionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDSDK.h",
+      "line": 38,
+      "symbol": "OMIDSDK.+isCompatibleWithOMIDAPIVersion:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDSDK.h",
+      "line": 44,
+      "symbol": "OMIDSDK.sharedInstance",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDSDK.h",
+      "line": 52,
+      "symbol": "OMIDSDK.active",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDSDK.h",
+      "line": 62,
+      "symbol": "OMIDSDK.-activateWithOMIDAPIVersion:error:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDScriptInjector.h",
+      "line": 13,
+      "symbol": "OMIDScriptInjector",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDScriptInjector.h",
+      "line": 22,
+      "symbol": "OMIDScriptInjector.+injectScriptContent:intoHTML:error:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 13,
+      "symbol": "OMIDPosition",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 13,
+      "symbol": "OMIDPosition",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 14,
+      "symbol": "OMIDPosition.OMIDPositionPreroll",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 15,
+      "symbol": "OMIDPosition.OMIDPositionMidroll",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 16,
+      "symbol": "OMIDPosition.OMIDPositionPostroll",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 17,
+      "symbol": "OMIDPosition.OMIDPositionStandalone",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 23,
+      "symbol": "OMIDVASTProperties",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 25,
+      "symbol": "OMIDVASTProperties.skippable",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 26,
+      "symbol": "OMIDVASTProperties.skipOffset",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 27,
+      "symbol": "OMIDVASTProperties.autoPlay",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 28,
+      "symbol": "OMIDVASTProperties.position",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 38,
+      "symbol": "OMIDVASTProperties.-initWithSkipOffset:autoPlay:position:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 49,
+      "symbol": "OMIDVASTProperties.-initWithAutoPlay:position:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVASTProperties.h",
+      "line": 52,
+      "symbol": "OMIDVASTProperties.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVerificationScriptResource.h",
+      "line": 13,
+      "symbol": "OMIDVerificationScriptResource",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVerificationScriptResource.h",
+      "line": 15,
+      "symbol": "OMIDVerificationScriptResource.URL",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVerificationScriptResource.h",
+      "line": 16,
+      "symbol": "OMIDVerificationScriptResource.vendorKey",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVerificationScriptResource.h",
+      "line": 17,
+      "symbol": "OMIDVerificationScriptResource.parameters",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVerificationScriptResource.h",
+      "line": 29,
+      "symbol": "OMIDVerificationScriptResource.-initWithURL:vendorKey:parameters:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVerificationScriptResource.h",
+      "line": 41,
+      "symbol": "OMIDVerificationScriptResource.-initWithURL:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVerificationScriptResource.h",
+      "line": 43,
+      "symbol": "OMIDVerificationScriptResource.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 15,
+      "symbol": "OMIDPlayerState",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 15,
+      "symbol": "OMIDPlayerState",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 16,
+      "symbol": "OMIDPlayerState.OMIDPlayerStateMinimized",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 17,
+      "symbol": "OMIDPlayerState.OMIDPlayerStateCollapsed",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 18,
+      "symbol": "OMIDPlayerState.OMIDPlayerStateNormal",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 19,
+      "symbol": "OMIDPlayerState.OMIDPlayerStateExpanded",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 20,
+      "symbol": "OMIDPlayerState.OMIDPlayerStateFullscreen",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 26,
+      "symbol": "OMIDInteractionType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 26,
+      "symbol": "OMIDInteractionType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 27,
+      "symbol": "OMIDInteractionType.OMIDInteractionTypeClick",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 28,
+      "symbol": "OMIDInteractionType.OMIDInteractionTypeAcceptInvitation",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 36,
+      "symbol": "OMIDVideoEvents",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 46,
+      "symbol": "OMIDVideoEvents.-initWithAdSession:error:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 54,
+      "symbol": "OMIDVideoEvents.-loadedWithVastProperties:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 62,
+      "symbol": "OMIDVideoEvents.-startWithDuration:videoPlayerVolume:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 68,
+      "symbol": "OMIDVideoEvents.-firstQuartile",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 73,
+      "symbol": "OMIDVideoEvents.-midpoint",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 78,
+      "symbol": "OMIDVideoEvents.-thirdQuartile",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 83,
+      "symbol": "OMIDVideoEvents.-complete",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 88,
+      "symbol": "OMIDVideoEvents.-pause",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 93,
+      "symbol": "OMIDVideoEvents.-resume",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 99,
+      "symbol": "OMIDVideoEvents.-skipped",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 104,
+      "symbol": "OMIDVideoEvents.-bufferStart",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 109,
+      "symbol": "OMIDVideoEvents.-bufferFinish",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 116,
+      "symbol": "OMIDVideoEvents.-volumeChangeTo:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 124,
+      "symbol": "OMIDVideoEvents.-playerStateChangeTo:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April/AppVerificationLibrary/OMIDVideoEvents.h",
+      "line": 132,
+      "symbol": "OMIDVideoEvents.-adUserInteractionWithType:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/arunsharma/Desktop/Open-Measurement-SDKiOS-master/29April"
+}
